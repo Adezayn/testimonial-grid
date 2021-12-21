@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: rgb(207, 207, 207);
+    font-weight: 500;
+    background-color: hsl(210, 46%, 95%);
+    font-size: 0.8125rem;
+}
+main{
+    width:90%;
+    max-width: 1440px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    /*grid-template-rows: repeat(2, auto);
+    grid-auto-rows: minmax(200px, auto);*/
+    margin: auto;
+}
+blockquote p{
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.color-1, .color-1 blockquote p{
+    color: #fff;
+}
+.color-2, .color-2 blockquote p{
+    color:rgba(72, 85, 106);
+}
+.color-1 > blockquote{
+    color: rgba(255,255,255,0.7);
+}
+.color-2 > blockquote{
+    color:rgba(72, 85, 106,0.7);
+}
+.color-1 figcaption > p:last-child{
+    color: rgba(255,255,255,0.5);
+}
+.color-2 figcaption > p:last-child{
+    color:rgba(72, 85, 106,0.5);
+}
+.grid{
+    padding:20px;
+    border-radius: 10px;
+}
+.item-1{
+    background-color:hsl(263, 55%, 52%);
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item-2{
+    background-color: hsl(217, 19%, 35%);
+}
+.item-3, .item-4{
+    background-color:hsl(0, 0%, 100%);
+}
+.item-3{
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.item-5{
+    background-color: #000;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+figure{
+    display:flex;
+    align-items: center;
+    gap:20px;
+}
+figure img{
+    border: 2px solid hsl(263, 55%, 52%);
+    border-radius: 50%;
+}
+
+.attribution{
+     font-size: 11px;
+     text-align: center;
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%);
+}
