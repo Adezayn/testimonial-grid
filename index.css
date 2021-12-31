@@ -3,26 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 62.5%;
+}
 body{
     min-height: 100vh;
     font-family: 'Barlow Semi Condensed', sans-serif;
     color: rgb(207, 207, 207);
     font-weight: 500;
     background-color: hsl(210, 46%, 95%);
-    font-size: 0.8125rem;
+    font-size: 1.3rem;
 }
 main{
     width:90%;
     max-width: 1440px;
     display: grid;
-    gap: 25px;
+    gap: 2.5rem;
     grid-template-columns: repeat(4, 1fr);
-    /*grid-template-rows: repeat(2, auto);
-    grid-auto-rows: minmax(200px, auto);*/
-    margin: auto;
+    margin: 10rem auto;
 }
 blockquote p{
-    margin: 20px 0;
+    margin: 2rem 0 3rem;
     font-weight: 600;
     font-size: 1.5rem;
 }
@@ -34,21 +35,29 @@ blockquote p{
 }
 .color-1 > blockquote{
     color: rgba(255,255,255,0.7);
+    line-height: 1.4;
 }
 .color-2 > blockquote{
     color:rgba(72, 85, 106,0.7);
+    line-height: 1.4;
 }
 .color-1 figcaption > p:last-child{
+    margin-top: .2rem;
     color: rgba(255,255,255,0.5);
 }
 .color-2 figcaption > p:last-child{
+    margin-top: .2rem;
     color:rgba(72, 85, 106,0.5);
 }
 .grid{
-    padding:20px;
-    border-radius: 10px;
+    padding:2rem;
+    border-radius: 1rem;
 }
 .item-1{
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-size: auto 13rem;
     background-color:hsl(263, 55%, 52%);
     grid-column-start: 1;
     grid-column-end: 3;
@@ -72,17 +81,48 @@ blockquote p{
 figure{
     display:flex;
     align-items: center;
-    gap:20px;
+    gap:2rem;
 }
 figure img{
-    border: 2px solid hsl(263, 55%, 52%);
+    border: .2rem solid hsl(263, 55%, 52%);
     border-radius: 50%;
 }
 
 .attribution{
-     font-size: 11px;
+     font-size: 1.1rem;
      text-align: center;
 }
 .attribution a{ 
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:576px){
+    html{
+        font-size: 50%;
+    }
+    main{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+    .item-1{
+        background-position-x: 90%;
+        grid-row-start: 1;
+    }
+    .item-2{
+        grid-row-start: 2;
+    }
+    
+    .item-4{
+        grid-row-start: 3;
+    }
+    .item-5{
+        grid-row-start: 4;
+    }
+    .item-3{
+        grid-row: 5/5;
+    }
+    .item-1,.item-2,.item-3,.item-4,.item-5{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
 }
